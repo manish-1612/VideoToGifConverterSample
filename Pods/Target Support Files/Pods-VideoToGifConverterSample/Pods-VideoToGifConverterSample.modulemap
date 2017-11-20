@@ -1,0 +1,6 @@
+framework module Pods_VideoToGifConverterSample {
+  umbrella header "Pods-VideoToGifConverterSample-umbrella.h"
+
+  export *
+  module * { export * }
+}
