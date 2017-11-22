@@ -1,0 +1,6 @@
+framework module Pods_VideoToGifConverterMacApp {
+  umbrella header "Pods-VideoToGifConverterMacApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

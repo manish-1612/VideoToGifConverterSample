@@ -7,8 +7,12 @@
 //
 
 import Cocoa
+import Regift
+
 
 class macViewController: NSViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +51,7 @@ class macViewController: NSViewController {
         dialog.canChooseDirectories    = true
         dialog.allowsMultipleSelection = false
         dialog.allowedFileTypes        = ["mp4","mov"]
+                         
         
         if (dialog.runModal() == NSApplication.ModalResponse.OK) {
             let result = dialog.url // Pathname of the file

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE55E99A98DA81A0631E1938051E9650"
-               BuildableName = "Pods_VideoToGifConverterSample.framework"
-               BlueprintName = "Pods-VideoToGifConverterSample"
+               BlueprintIdentifier = "C56A20612514A1D0DEF39BEB4B098DE5"
+               BuildableName = "Regift.framework"
+               BlueprintName = "Regift-OSX"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AE55E99A98DA81A0631E1938051E9650"
-            BuildableName = "Pods_VideoToGifConverterSample.framework"
-            BlueprintName = "Pods-VideoToGifConverterSample"
+            BlueprintIdentifier = "C56A20612514A1D0DEF39BEB4B098DE5"
+            BuildableName = "Regift.framework"
+            BlueprintName = "Regift-OSX"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -16,10 +16,12 @@
 		79ABDB3E1FC560A300C57C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79ABDB3D1FC560A300C57C16 /* Assets.xcassets */; };
 		79ABDB411FC560A300C57C16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79ABDB3F1FC560A300C57C16 /* Main.storyboard */; };
 		79ABDB481FC561F300C57C16 /* macViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABDB471FC561F300C57C16 /* macViewController.swift */; };
+		88E48623D3D95DECD51FC15E /* Pods_VideoToGifConverterMacApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC56D9BDBC2312282E5081E9 /* Pods_VideoToGifConverterMacApp.framework */; };
 		C55A371244D26C486B544403 /* Pods_VideoToGifConverterSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C345D485EE3EFA84812E1F7 /* Pods_VideoToGifConverterSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0433BE34EC89B457AD80F363 /* Pods-VideoToGifConverterMacApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoToGifConverterMacApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoToGifConverterMacApp/Pods-VideoToGifConverterMacApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5E507B0A3AE905A66C0FDADD /* Pods-VideoToGifConverterSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoToGifConverterSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoToGifConverterSample/Pods-VideoToGifConverterSample.release.xcconfig"; sourceTree = "<group>"; };
 		797D2D8C1FC2B34B004A7A70 /* VideoToGifConverterSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoToGifConverterSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797D2D8F1FC2B34B004A7A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		79ABDB471FC561F300C57C16 /* macViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macViewController.swift; sourceTree = "<group>"; };
 		7C345D485EE3EFA84812E1F7 /* Pods_VideoToGifConverterSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoToGifConverterSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B279FF76A92D1C5CD5C136 /* Pods-VideoToGifConverterSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoToGifConverterSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoToGifConverterSample/Pods-VideoToGifConverterSample.debug.xcconfig"; sourceTree = "<group>"; };
+		A9124511297CA27283765014 /* Pods-VideoToGifConverterMacApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoToGifConverterMacApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoToGifConverterMacApp/Pods-VideoToGifConverterMacApp.release.xcconfig"; sourceTree = "<group>"; };
+		EC56D9BDBC2312282E5081E9 /* Pods_VideoToGifConverterMacApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoToGifConverterMacApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E48623D3D95DECD51FC15E /* Pods_VideoToGifConverterMacApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,8 @@
 			children = (
 				A1B279FF76A92D1C5CD5C136 /* Pods-VideoToGifConverterSample.debug.xcconfig */,
 				5E507B0A3AE905A66C0FDADD /* Pods-VideoToGifConverterSample.release.xcconfig */,
+				0433BE34EC89B457AD80F363 /* Pods-VideoToGifConverterMacApp.debug.xcconfig */,
+				A9124511297CA27283765014 /* Pods-VideoToGifConverterMacApp.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 				797D2DA21FC2DFF0004A7A70 /* Photos.framework */,
 				797D2DA11FC2BDD6004A7A70 /* MobileCoreServices.framework */,
 				7C345D485EE3EFA84812E1F7 /* Pods_VideoToGifConverterSample.framework */,
+				EC56D9BDBC2312282E5081E9 /* Pods_VideoToGifConverterMacApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79ABDB461FC560A300C57C16 /* Build configuration list for PBXNativeTarget "VideoToGifConverterMacApp" */;
 			buildPhases = (
+				9D5E64FD9F2DE56EA4B67D39 /* [CP] Check Pods Manifest.lock */,
 				79ABDB331FC560A300C57C16 /* Sources */,
 				79ABDB341FC560A300C57C16 /* Frameworks */,
 				79ABDB351FC560A300C57C16 /* Resources */,
+				7BA7FF64B36DC779CC767B96 /* [CP] Embed Pods Frameworks */,
+				7C8B455C0B258ECFF6BA133F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +266,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoToGifConverterSample/Pods-VideoToGifConverterSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BA7FF64B36DC779CC767B96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoToGifConverterMacApp/Pods-VideoToGifConverterMacApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C8B455C0B258ECFF6BA133F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoToGifConverterMacApp/Pods-VideoToGifConverterMacApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D5E64FD9F2DE56EA4B67D39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E256443DCBA1FE0B2F8FC257 /* [CP] Check Pods Manifest.lock */ = {
@@ -466,6 +522,7 @@
 		};
 		79ABDB441FC560A300C57C16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0433BE34EC89B457AD80F363 /* Pods-VideoToGifConverterMacApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = VideoToGifConverterMacApp/VideoToGifConverterMacApp.entitlements;
@@ -484,6 +541,7 @@
 		};
 		79ABDB451FC560A300C57C16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9124511297CA27283765014 /* Pods-VideoToGifConverterMacApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = VideoToGifConverterMacApp/VideoToGifConverterMacApp.entitlements;

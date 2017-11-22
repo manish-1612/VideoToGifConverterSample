@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE55E99A98DA81A0631E1938051E9650"
-               BuildableName = "Pods_VideoToGifConverterSample.framework"
-               BlueprintName = "Pods-VideoToGifConverterSample"
+               BlueprintIdentifier = "CA2FF22668A316E510CB509D3DFD0850"
+               BuildableName = "Pods_VideoToGifConverterMacApp.framework"
+               BlueprintName = "Pods-VideoToGifConverterMacApp"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AE55E99A98DA81A0631E1938051E9650"
-            BuildableName = "Pods_VideoToGifConverterSample.framework"
-            BlueprintName = "Pods-VideoToGifConverterSample"
+            BlueprintIdentifier = "CA2FF22668A316E510CB509D3DFD0850"
+            BuildableName = "Pods_VideoToGifConverterMacApp.framework"
+            BlueprintName = "Pods-VideoToGifConverterMacApp"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

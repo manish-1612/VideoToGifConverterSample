@@ -1,0 +1,6 @@
+framework module Regift {
+  umbrella header "Regift-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

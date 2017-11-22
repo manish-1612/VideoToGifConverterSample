@@ -1,5 +1,5 @@
 framework module Regift {
-  umbrella header "Regift-umbrella.h"
+  umbrella header "Regift-OSX-umbrella.h"
 
   export *
   module * { export * }
