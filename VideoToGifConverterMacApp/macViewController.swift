@@ -67,7 +67,6 @@ class macViewController: NSViewController {
             if (savePanel.runModal() == NSApplication.ModalResponse.OK) {
 
                 let urlToSave = savePanel.url
-                let fileToSave = savePanel.nameFieldStringValue
                 
                 let fileURL = "\(urlToSave!.path).gif"
                 print("file to save at: \(fileURL)")
