@@ -13,7 +13,6 @@ import Regift
 class macViewController: NSViewController {
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -21,27 +20,6 @@ class macViewController: NSViewController {
     
     
     @IBAction func chooseFileButtonClicked(_ sender: NSButton) {
-        
-//        var _: Int = 0
-//        // Loop counter.
-//        // Create the File Open Dialog class.
-//        let openDlg = NSOpenPanel()
-//        // Enable the selection of files in the dialog.
-//        openDlg.canChooseFiles = true
-//        // Enable the selection of directories in the dialog.
-//        openDlg.canChooseDirectories = true
-//        // Display the dialog.  If the OK button was pressed,
-//        // process the files.
-//        if openDlg.runModal().rawValue == NSApplication.ModalResponse.OK.rawValue {
-//            // Get an array containing the full filenames of all
-//            // files and directories selected.
-//            var files = openDlg.file
-//            // Loop through all the files and process them.
-//            for i in 0..<files.count {
-//                var fileName = files[i] as? String
-//                // Do something with the filename.
-//            }
-//        }
         
         let dialog = NSOpenPanel()
         
@@ -59,12 +37,52 @@ class macViewController: NSViewController {
             if (result != nil) {
                 let path = result!.path
                 print("path: \(path)")
+                createGifFromVideoAtPath(path: path)
+                
             }
         } else {
             // User clicked on "Cancel"
             return
         }
-
     }
     
+    
+    func createGifFromVideoAtPath(path: String){
+        
+        let frameCount = 120
+        let delayTime  = Float(0.2)
+        let urlPath = URL(fileURLWithPath: path)
+
+        Regift.createGIFFromSource(urlPath, frameCount: frameCount, delayTime: delayTime) { (result)
+            in
+            print("Gif saved to \(String(describing: result))")
+            
+            let gifData = NSData.init(contentsOfFile: result!.path)
+//            let library = PHPhotoLibrary.shared()
+//            let auth = PHPhotoLibrary.authorizationStatus()
+            
+//            if auth == PHAuthorizationStatus.authorized{
+//                print("auth : \(auth)")
+//                //save data
+//                library.performChanges({
+//                    let options = PHAssetResourceCreationOptions()
+//                    PHAssetCreationRequest.forAsset().addResource(with: PHAssetResourceType.photo, data: gifData! as Data, options: options)
+//                }, completionHandler: { (success, error) in
+//                    print("success : \(success)")
+//
+//                    let alert =  UIAlertController(title: "Success", message: "GIF saved to device", preferredStyle: UIAlertControllerStyle.alert)
+//
+//                    let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.destructive, handler: nil)
+//                    alert.addAction(ok)
+//                    self.present(alert, animated: true, completion: nil)
+//                })
+//            }else{
+//                PHPhotoLibrary.requestAuthorization({ (status) in
+//                    print("status : \(status)")
+//                })
+//            }
+            
+        }
+
+    }
 }
