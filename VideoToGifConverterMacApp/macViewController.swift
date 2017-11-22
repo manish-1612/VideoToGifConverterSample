@@ -8,7 +8,7 @@
 
 import Cocoa
 import Regift
-
+import Photos
 
 class macViewController: NSViewController {
     
@@ -32,13 +32,13 @@ class macViewController: NSViewController {
                          
         
         if (dialog.runModal() == NSApplication.ModalResponse.OK) {
-            let result = dialog.url // Pathname of the file
             
+            let result = dialog.url // Pathname of the file
             if (result != nil) {
+                dialog.close()
                 let path = result!.path
                 print("path: \(path)")
                 createGifFromVideoAtPath(path: path)
-                
             }
         } else {
             // User clicked on "Cancel"
@@ -58,31 +58,24 @@ class macViewController: NSViewController {
             print("Gif saved to \(String(describing: result))")
             
             let gifData = NSData.init(contentsOfFile: result!.path)
-//            let library = PHPhotoLibrary.shared()
-//            let auth = PHPhotoLibrary.authorizationStatus()
             
-//            if auth == PHAuthorizationStatus.authorized{
-//                print("auth : \(auth)")
-//                //save data
-//                library.performChanges({
-//                    let options = PHAssetResourceCreationOptions()
-//                    PHAssetCreationRequest.forAsset().addResource(with: PHAssetResourceType.photo, data: gifData! as Data, options: options)
-//                }, completionHandler: { (success, error) in
-//                    print("success : \(success)")
-//
-//                    let alert =  UIAlertController(title: "Success", message: "GIF saved to device", preferredStyle: UIAlertControllerStyle.alert)
-//
-//                    let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.destructive, handler: nil)
-//                    alert.addAction(ok)
-//                    self.present(alert, animated: true, completion: nil)
-//                })
-//            }else{
-//                PHPhotoLibrary.requestAuthorization({ (status) in
-//                    print("status : \(status)")
-//                })
-//            }
+            let savePanel = NSSavePanel()
+            savePanel.showsResizeIndicator    = true
+            savePanel.showsHiddenFiles        = true
+            savePanel.canCreateDirectories    = true
             
-        }
+            if (savePanel.runModal() == NSApplication.ModalResponse.OK) {
 
+                let urlToSave = savePanel.url
+                let fileToSave = savePanel.nameFieldStringValue
+                
+                let fileURL = "\(urlToSave!.path).gif"
+                print("file to save at: \(fileURL)")
+                gifData?.write(to: NSURL.fileURL(withPath: fileURL), atomically: true)
+            } else {
+
+                return
+            }
+        }
     }
 }
